@@ -13,13 +13,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelLanguage: UILabel!
     @IBOutlet weak var viewHolder: UIView!
     
-    let languageOne = "English"
-    let languageTwo = "Spanish"
-    let languageThree = "Italian"
+    let languageOne = "Astrualian Slang"
+    let languageTwo = "Chinese"
+    let languageThree = "Russian"
     
-    let helloOne = "Hello"
-    let helloTwo = "Hola"
-    let helloThree = "Ciao"
+    let helloOne = "G'Day"
+    let helloTwo = "Ni Hao"
+    let helloThree = "Privyet"
     
     override func viewDidLoad() {
         super.viewDidLoad()
