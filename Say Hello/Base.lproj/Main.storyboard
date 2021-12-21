@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,27 +13,30 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Say_Hello" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w5x-C6-mbi">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swB-nd-MIZ">
-                                        <rect key="frame" x="6" y="0.0" width="400" height="96"/>
+                                        <rect key="frame" x="4" y="0.0" width="309" height="96"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jen-92-goz">
-                                        <rect key="frame" x="6" y="744" width="400" height="74"/>
+                                        <rect key="frame" x="5" y="494" width="308" height="74"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Say Hello!"/>
+                                        <connections>
+                                            <action selector="buttonSayHello:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JId-4n-HIj"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Language Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjd-Y0-Ui8">
-                                        <rect key="frame" x="8" y="388" width="397" height="42"/>
+                                        <rect key="frame" x="8" y="263" width="303" height="42"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -47,13 +50,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="w5x-C6-mbi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="BFo-Ed-GFs"/>
+                            <constraint firstItem="w5x-C6-mbi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="C5L-e3-nWd"/>
+                            <constraint firstItem="w5x-C6-mbi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Re3-wT-5LU"/>
                             <constraint firstItem="w5x-C6-mbi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="W8n-tv-LaH"/>
                             <constraint firstItem="w5x-C6-mbi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aNb-sd-T45"/>
                             <constraint firstItem="w5x-C6-mbi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eJP-eY-Lpy"/>
+                            <constraint firstItem="w5x-C6-mbi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="f65-Te-8Xd"/>
+                            <constraint firstItem="w5x-C6-mbi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zfk-N8-Hpo"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="labelHello" destination="swB-nd-MIZ" id="f2f-7S-K1y"/>
+                        <outlet property="labelLanguage" destination="pjd-Y0-Ui8" id="ffZ-6o-QNZ"/>
                         <outlet property="viewBackground" destination="8bC-Xf-vdC" id="hWU-6R-pKJ"/>
+                        <outlet property="viewHolder" destination="w5x-C6-mbi" id="CZn-q1-lOD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
